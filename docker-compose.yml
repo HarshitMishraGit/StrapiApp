@@ -1,0 +1,32 @@
+version: "3.8"
+services:
+  db:
+    container_name: postgres_container
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: test_db
+    ports:
+      - "5432:5432"
+  pgadmin:
+    container_name: pgadmin4_container
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "5050:80"
+
+# docker-compose up -d to start the containers
+# then you have to inspect the container running postgress and get the ip address
+# docker inspect postgres_container_id
+# then you can open browser and go to http://localhost:5050
+# login with the credentials you set in the docker-compose file
+# then you can add a new server
+# host name is the ip address you got from inspecting the postgres container
+# username and password are the ones you set in the docker-compose file
+# then you can create a new database
+# Now use that name and credentials in your strapi project
