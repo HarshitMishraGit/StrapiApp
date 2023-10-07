@@ -2,14 +2,26 @@
 import axios from 'axios';
 
 const Blog = ({ blog }) => {
+  console.log("Blog is", blog);
+  return (
+    <div>
+      {blog ? (
+        <>
+          <h1 className="text-2xl text-center underline underline-offset-4">
+            {blog.attributes.title}
+          </h1>
+          <p>{blog.attributes.content}</p>
+        </>
+      ) : (
+          <div className='flex flex-row justify-center items-center w-full h-full'>
 
-console.log("Blog is",blog)
-    return (
-        <div>
-            <h1 className='text-2xl text-center underline underline-offset-4'>{blog.attributes.title}</h1>
-            <p>{blog.attributes.content}</p>
-        </div>
-    );
+        <h1 className="text-2xl text-center font-bold">
+          No Blog Found
+        </h1>
+          </div>
+      )}
+    </div>
+  );
 };
 
 export async function getStaticProps(context) {
@@ -38,7 +50,7 @@ export async function getStaticPaths() {
         }));
         return {
           paths,
-          fallback: false,
+          fallback: 'blocking',
         };
     
   }
