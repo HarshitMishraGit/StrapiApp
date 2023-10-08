@@ -690,13 +690,19 @@ export interface ApiBlogBlog extends Schema.CollectionType {
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
-    content: Attribute.RichText & Attribute.Required;
     slug: Attribute.UID<'api::blog.blog', 'title'> & Attribute.Required;
     comments: Attribute.Relation<
       'api::blog.blog',
       'oneToMany',
       'api::comment.comment'
     >;
+    content: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'blockBaloon';
+        }
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -713,18 +719,19 @@ export interface ApiCommentComment extends Schema.CollectionType {
     singularName: 'comment';
     pluralName: 'comments';
     displayName: 'comment';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     name: Attribute.String & Attribute.Required;
-    description: Attribute.Blocks;
     blog: Attribute.Relation<
       'api::comment.comment',
       'manyToOne',
       'api::blog.blog'
     >;
+    description: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

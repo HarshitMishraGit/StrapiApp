@@ -8,7 +8,8 @@ const Blog = ({ blog }) => {
   const commentsData = blog.attributes.comments.data;
   function convertJSONToHTML(jsonContent) {
     const jsonFormat = JSON.stringify(jsonContent);
-    const htmlContent = EditorJSHTML(jsonContent);
+    const edjs = new EditorJSHTML();
+    const htmlContent= edjs.parseBlock(jsonContent);
     return { __html: htmlContent };
   }
   return (
@@ -18,7 +19,8 @@ const Blog = ({ blog }) => {
           <h1 className="text-2xl text-center underline underline-offset-4">
             {blog.attributes.title}
           </h1>
-          <p>{blog.attributes.content}</p>
+          {/* <p>{blog.attributes.content}</p> */}
+          <div dangerouslySetInnerHTML={{ __html: blog.attributes.content }} className='w-4/5 mx-auto py-10 ck-content '></div>
 
           <div className='my-24'>
             <h1 className='text-xl font-semibold text-start px-5 py-3'>Comments</h1>
