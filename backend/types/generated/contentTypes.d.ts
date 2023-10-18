@@ -677,72 +677,448 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface ApiBlogBlog extends Schema.CollectionType {
-  collectionName: 'blogs';
+export interface ApiAboutUsAboutUs extends Schema.SingleType {
+  collectionName: 'about_uses';
   info: {
-    singularName: 'blog';
-    pluralName: 'blogs';
-    displayName: 'Blog';
-    description: '';
+    singularName: 'about-us';
+    pluralName: 'about-uses';
+    displayName: 'AboutUs';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
-    slug: Attribute.UID<'api::blog.blog', 'title'> & Attribute.Required;
-    comments: Attribute.Relation<
-      'api::blog.blog',
-      'oneToMany',
-      'api::comment.comment'
-    >;
-    content: Attribute.RichText &
-      Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'blockBaloon';
-        }
-      >;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::blog.blog', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::blog.blog', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
-export interface ApiCommentComment extends Schema.CollectionType {
-  collectionName: 'comments';
-  info: {
-    singularName: 'comment';
-    pluralName: 'comments';
-    displayName: 'comment';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String & Attribute.Required;
-    blog: Attribute.Relation<
-      'api::comment.comment',
-      'manyToOne',
-      'api::blog.blog'
-    >;
-    description: Attribute.RichText;
+    URL: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'/aboutus'>;
+    seoInformation: Attribute.Component<'seo.seo-info'>;
+    faqs: Attribute.Component<'layout.fa-qs'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::comment.comment',
+      'api::about-us.about-us',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::comment.comment',
+      'api::about-us.about-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiContactUsContactUs extends Schema.SingleType {
+  collectionName: 'contact_uses';
+  info: {
+    singularName: 'contact-us';
+    pluralName: 'contact-uses';
+    displayName: 'ContactUs';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    URL: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'/contactus'>;
+    seoInformation: Attribute.Component<'seo.seo-info'>;
+    faqs: Attribute.Component<'layout.fa-qs'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact-us.contact-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact-us.contact-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCustomWebDevelopmentServiceCustomWebDevelopmentService
+  extends Schema.SingleType {
+  collectionName: 'custom_web_development_services';
+  info: {
+    singularName: 'custom-web-development-service';
+    pluralName: 'custom-web-development-services';
+    displayName: 'Custom-web-development-service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    URL: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'/web-design-and-development/custom-web-development'>;
+    seoInformation: Attribute.Component<'seo.seo-info'>;
+    faqs: Attribute.Component<'layout.fa-qs'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::custom-web-development-service.custom-web-development-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::custom-web-development-service.custom-web-development-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiDigitalMarketingServiceDigitalMarketingService
+  extends Schema.SingleType {
+  collectionName: 'digital_marketing_services';
+  info: {
+    singularName: 'digital-marketing-service';
+    pluralName: 'digital-marketing-services';
+    displayName: 'digital-marketing-service';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    URL: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'/digital-marketing-services'>;
+    seoInformation: Attribute.Component<'seo.seo-info'>;
+    faqs: Attribute.Component<'layout.fa-qs'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::digital-marketing-service.digital-marketing-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::digital-marketing-service.digital-marketing-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiECommerceWebsiteDevelopmentServiceECommerceWebsiteDevelopmentService
+  extends Schema.SingleType {
+  collectionName: 'e_commerce_website_development_services';
+  info: {
+    singularName: 'e-commerce-website-development-service';
+    pluralName: 'e-commerce-website-development-services';
+    displayName: 'E-commerce-website-development-service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    URL: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'/web-design-and-development/e-commerce-website-development'>;
+    seoInformation: Attribute.Component<'seo.seo-info'>;
+    faqs: Attribute.Component<'layout.fa-qs'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::e-commerce-website-development-service.e-commerce-website-development-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::e-commerce-website-development-service.e-commerce-website-development-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiGraphicDesignGraphicDesign extends Schema.SingleType {
+  collectionName: 'graphic_designs';
+  info: {
+    singularName: 'graphic-design';
+    pluralName: 'graphic-designs';
+    displayName: 'Graphic-design';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    URL: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'/digital-marketing-services/graphic-design'>;
+    seoInformation: Attribute.Component<'seo.seo-info'>;
+    faqs: Attribute.Component<'layout.fa-qs'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::graphic-design.graphic-design',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::graphic-design.graphic-design',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomePageHomePage extends Schema.SingleType {
+  collectionName: 'home_pages';
+  info: {
+    singularName: 'home-page';
+    pluralName: 'home-pages';
+    displayName: 'HomePage';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    URL: Attribute.String & Attribute.Required & Attribute.DefaultTo<'/'>;
+    seoInformation: Attribute.Component<'seo.seo-info'>;
+    faqs: Attribute.Component<'layout.fa-qs'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-page.home-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-page.home-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPpcMarketingPpcMarketing extends Schema.SingleType {
+  collectionName: 'ppc_marketings';
+  info: {
+    singularName: 'ppc-marketing';
+    pluralName: 'ppc-marketings';
+    displayName: 'PPC-marketing';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    URL: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'/digital-marketing-services/ppc-marketing'>;
+    seoInformation: Attribute.Component<'seo.seo-info'>;
+    faqs: Attribute.Component<'layout.fa-qs'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::ppc-marketing.ppc-marketing',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::ppc-marketing.ppc-marketing',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSeoServiceSeoService extends Schema.SingleType {
+  collectionName: 'seo_services';
+  info: {
+    singularName: 'seo-service';
+    pluralName: 'seo-services';
+    displayName: 'SEO-service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    URL: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'/digital-marketing-services/seo'>;
+    seoInformation: Attribute.Component<'seo.seo-info'>;
+    faqs: Attribute.Component<'layout.fa-qs'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::seo-service.seo-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::seo-service.seo-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSocialMediaMarketingServiceSocialMediaMarketingService
+  extends Schema.SingleType {
+  collectionName: 'social_media_marketing_services';
+  info: {
+    singularName: 'social-media-marketing-service';
+    pluralName: 'social-media-marketing-services';
+    displayName: 'Social-media-marketing-service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    URL: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'/digital-marketing-services/social-media-marketing'>;
+    seoInformation: Attribute.Component<'seo.seo-info'>;
+    faqs: Attribute.Component<'layout.fa-qs'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::social-media-marketing-service.social-media-marketing-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::social-media-marketing-service.social-media-marketing-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSurveillanceServiceSurveillanceService
+  extends Schema.SingleType {
+  collectionName: 'surveillance_services';
+  info: {
+    singularName: 'surveillance-service';
+    pluralName: 'surveillance-services';
+    displayName: 'Surveillance-service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    URL: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'/surveillance-services'>;
+    seoInformation: Attribute.Component<'seo.seo-info'>;
+    faqs: Attribute.Component<'layout.fa-qs'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::surveillance-service.surveillance-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::surveillance-service.surveillance-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiWebDesignAndDevelopmentWebDesignAndDevelopment
+  extends Schema.SingleType {
+  collectionName: 'web_design_and_developments';
+  info: {
+    singularName: 'web-design-and-development';
+    pluralName: 'web-design-and-developments';
+    displayName: 'Web-design-and-development';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    URL: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'/web-design-and-development'>;
+    seoInformation: Attribute.Component<'seo.seo-info'>;
+    faqs: Attribute.Component<'layout.fa-qs'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::web-design-and-development.web-design-and-development',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::web-design-and-development.web-design-and-development',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiWordpressDevelopmentServiceWordpressDevelopmentService
+  extends Schema.SingleType {
+  collectionName: 'wordpress_development_services';
+  info: {
+    singularName: 'wordpress-development-service';
+    pluralName: 'wordpress-development-services';
+    displayName: 'Wordpress-development-service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    URL: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'/web-design-and-development/wordpress-development'>;
+    seoInformation: Attribute.Component<'seo.seo-info'>;
+    faqs: Attribute.Component<'layout.fa-qs'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::wordpress-development-service.wordpress-development-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::wordpress-development-service.wordpress-development-service',
       'oneToOne',
       'admin::user'
     > &
@@ -766,8 +1142,19 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
-      'api::blog.blog': ApiBlogBlog;
-      'api::comment.comment': ApiCommentComment;
+      'api::about-us.about-us': ApiAboutUsAboutUs;
+      'api::contact-us.contact-us': ApiContactUsContactUs;
+      'api::custom-web-development-service.custom-web-development-service': ApiCustomWebDevelopmentServiceCustomWebDevelopmentService;
+      'api::digital-marketing-service.digital-marketing-service': ApiDigitalMarketingServiceDigitalMarketingService;
+      'api::e-commerce-website-development-service.e-commerce-website-development-service': ApiECommerceWebsiteDevelopmentServiceECommerceWebsiteDevelopmentService;
+      'api::graphic-design.graphic-design': ApiGraphicDesignGraphicDesign;
+      'api::home-page.home-page': ApiHomePageHomePage;
+      'api::ppc-marketing.ppc-marketing': ApiPpcMarketingPpcMarketing;
+      'api::seo-service.seo-service': ApiSeoServiceSeoService;
+      'api::social-media-marketing-service.social-media-marketing-service': ApiSocialMediaMarketingServiceSocialMediaMarketingService;
+      'api::surveillance-service.surveillance-service': ApiSurveillanceServiceSurveillanceService;
+      'api::web-design-and-development.web-design-and-development': ApiWebDesignAndDevelopmentWebDesignAndDevelopment;
+      'api::wordpress-development-service.wordpress-development-service': ApiWordpressDevelopmentServiceWordpressDevelopmentService;
     }
   }
 }

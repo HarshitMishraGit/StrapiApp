@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "web_design_and_developments",
+  "info": {
+    "singularName": "web-design-and-development",
+    "pluralName": "web-design-and-developments",
+    "displayName": "Web-design-and-development"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "URL": {
+      "type": "string",
+      "required": true,
+      "default": "/web-design-and-development"
+    },
+    "seoInformation": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-info"
+    },
+    "faqs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.fa-qs"
+    }
+  }
+}

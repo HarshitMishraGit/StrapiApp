@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "graphic_designs",
+  "info": {
+    "singularName": "graphic-design",
+    "pluralName": "graphic-designs",
+    "displayName": "Graphic-design"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "URL": {
+      "type": "string",
+      "required": true,
+      "default": "/digital-marketing-services/graphic-design"
+    },
+    "seoInformation": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-info"
+    },
+    "faqs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.fa-qs"
+    }
+  }
+}

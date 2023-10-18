@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_uses",
+  "info": {
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "AboutUs"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "URL": {
+      "type": "string",
+      "required": true,
+      "default": "/aboutus"
+    },
+    "seoInformation": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-info"
+    },
+    "faqs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.fa-qs"
+    }
+  }
+}

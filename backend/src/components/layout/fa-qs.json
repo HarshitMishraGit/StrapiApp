@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_fa_qs",
+  "info": {
+    "displayName": "FAQs",
+    "icon": "lightbulb",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "questionAnswer": {
+      "displayName": "QuestionAnswer",
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.question-answer",
+      "required": true
+    }
+  }
+}

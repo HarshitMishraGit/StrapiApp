@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "e_commerce_website_development_services",
+  "info": {
+    "singularName": "e-commerce-website-development-service",
+    "pluralName": "e-commerce-website-development-services",
+    "displayName": "E-commerce-website-development-service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "URL": {
+      "type": "string",
+      "required": true,
+      "default": "/web-design-and-development/e-commerce-website-development"
+    },
+    "seoInformation": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-info"
+    },
+    "faqs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.fa-qs"
+    }
+  }
+}

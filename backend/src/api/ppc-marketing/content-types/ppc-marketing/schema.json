@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "ppc_marketings",
+  "info": {
+    "singularName": "ppc-marketing",
+    "pluralName": "ppc-marketings",
+    "displayName": "PPC-marketing"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "URL": {
+      "type": "string",
+      "default": "/digital-marketing-services/ppc-marketing",
+      "required": true
+    },
+    "seoInformation": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-info"
+    },
+    "faqs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.fa-qs"
+    }
+  }
+}

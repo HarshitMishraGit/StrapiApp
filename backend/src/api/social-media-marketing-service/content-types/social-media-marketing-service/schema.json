@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "social_media_marketing_services",
+  "info": {
+    "singularName": "social-media-marketing-service",
+    "pluralName": "social-media-marketing-services",
+    "displayName": "Social-media-marketing-service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "URL": {
+      "type": "string",
+      "required": true,
+      "default": "/digital-marketing-services/social-media-marketing"
+    },
+    "seoInformation": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-info"
+    },
+    "faqs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.fa-qs"
+    }
+  }
+}

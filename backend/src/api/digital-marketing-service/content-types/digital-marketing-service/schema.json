@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "digital_marketing_services",
+  "info": {
+    "singularName": "digital-marketing-service",
+    "pluralName": "digital-marketing-services",
+    "displayName": "digital-marketing-service",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "URL": {
+      "type": "string",
+      "required": true,
+      "default": "/digital-marketing-services"
+    },
+    "seoInformation": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-info"
+    },
+    "faqs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.fa-qs"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "surveillance_services",
+  "info": {
+    "singularName": "surveillance-service",
+    "pluralName": "surveillance-services",
+    "displayName": "Surveillance-service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "URL": {
+      "type": "string",
+      "required": true,
+      "default": "/surveillance-services"
+    },
+    "seoInformation": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-info"
+    },
+    "faqs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.fa-qs"
+    }
+  }
+}

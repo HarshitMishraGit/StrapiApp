@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "seo_services",
+  "info": {
+    "singularName": "seo-service",
+    "pluralName": "seo-services",
+    "displayName": "SEO-service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "URL": {
+      "type": "string",
+      "default": "/digital-marketing-services/seo",
+      "required": true
+    },
+    "seoInformation": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-info"
+    },
+    "faqs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.fa-qs"
+    }
+  }
+}
