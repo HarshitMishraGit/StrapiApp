@@ -6,4 +6,10 @@
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::surveillance-service.surveillance-service');
+module.exports = createCoreRouter('api::surveillance-service.surveillance-service', {
+    config: {
+        find: {
+            middlewares:["api::about-us.about-us-data"],
+        }
+    }
+});

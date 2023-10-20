@@ -1,8 +1,7 @@
 const config = {
-  locales: [
-  ],
+  locales: [],
   tutorials:false,
-  notifications:{release :false},
+  notifications:{releases :false},
   translations: {
     en: {
       "app.components.LeftMenu.navbrand.title": "RamRaj Associates",

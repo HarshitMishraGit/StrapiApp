@@ -6,4 +6,10 @@
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::graphic-design.graphic-design');
+module.exports = createCoreRouter('api::graphic-design.graphic-design', {
+    config: {
+        find: {
+            middlewares:["api::about-us.about-us-data"],
+        }
+    }
+});
