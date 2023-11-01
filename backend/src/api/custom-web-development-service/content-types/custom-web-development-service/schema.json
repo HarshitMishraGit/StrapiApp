@@ -4,7 +4,8 @@
   "info": {
     "singularName": "custom-web-development-service",
     "pluralName": "custom-web-development-services",
-    "displayName": "Custom-web-development-service"
+    "displayName": "Custom-web-development-service",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,12 +20,14 @@
     "seoInformation": {
       "type": "component",
       "repeatable": false,
-      "component": "seo.seo-info"
+      "component": "seo.seo-info",
+      "required": true
     },
     "faqs": {
       "type": "component",
       "repeatable": false,
-      "component": "layout.fa-qs"
+      "component": "layout.fa-qs",
+      "required": true
     }
   }
 }

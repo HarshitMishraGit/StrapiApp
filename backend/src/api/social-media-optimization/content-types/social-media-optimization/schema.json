@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "home_pages",
+  "collectionName": "social_media_optimizations",
   "info": {
-    "singularName": "home-page",
-    "pluralName": "home-pages",
-    "displayName": "HomePage",
+    "singularName": "social-media-optimization",
+    "pluralName": "social-media-optimizations",
+    "displayName": "Social-media-optimization",
     "description": ""
   },
   "options": {
@@ -14,7 +14,7 @@
   "attributes": {
     "URL": {
       "type": "string",
-      "default": "/",
+      "default": "/digital-marketing-services/social-media-optimization",
       "required": true
     },
     "seoInformation": {

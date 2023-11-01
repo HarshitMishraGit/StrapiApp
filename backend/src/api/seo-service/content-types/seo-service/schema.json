@@ -4,7 +4,8 @@
   "info": {
     "singularName": "seo-service",
     "pluralName": "seo-services",
-    "displayName": "SEO-service"
+    "displayName": "SEO-service",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,12 +20,14 @@
     "seoInformation": {
       "type": "component",
       "repeatable": false,
-      "component": "seo.seo-info"
+      "component": "seo.seo-info",
+      "required": true
     },
     "faqs": {
       "type": "component",
       "repeatable": false,
-      "component": "layout.fa-qs"
+      "component": "layout.fa-qs",
+      "required": true
     }
   }
 }

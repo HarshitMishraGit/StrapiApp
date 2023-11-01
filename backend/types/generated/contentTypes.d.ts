@@ -683,6 +683,7 @@ export interface ApiAboutUsAboutUs extends Schema.SingleType {
     singularName: 'about-us';
     pluralName: 'about-uses';
     displayName: 'AboutUs';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -691,8 +692,8 @@ export interface ApiAboutUsAboutUs extends Schema.SingleType {
     URL: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'/aboutus'>;
-    seoInformation: Attribute.Component<'seo.seo-info'>;
-    faqs: Attribute.Component<'layout.fa-qs'>;
+    seoInformation: Attribute.Component<'seo.seo-info'> & Attribute.Required;
+    faqs: Attribute.Component<'layout.fa-qs'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -717,6 +718,7 @@ export interface ApiContactUsContactUs extends Schema.SingleType {
     singularName: 'contact-us';
     pluralName: 'contact-uses';
     displayName: 'ContactUs';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -725,8 +727,8 @@ export interface ApiContactUsContactUs extends Schema.SingleType {
     URL: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'/contactus'>;
-    seoInformation: Attribute.Component<'seo.seo-info'>;
-    faqs: Attribute.Component<'layout.fa-qs'>;
+    seoInformation: Attribute.Component<'seo.seo-info'> & Attribute.Required;
+    faqs: Attribute.Component<'layout.fa-qs'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -752,6 +754,7 @@ export interface ApiCustomWebDevelopmentServiceCustomWebDevelopmentService
     singularName: 'custom-web-development-service';
     pluralName: 'custom-web-development-services';
     displayName: 'Custom-web-development-service';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -760,8 +763,8 @@ export interface ApiCustomWebDevelopmentServiceCustomWebDevelopmentService
     URL: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'/web-design-and-development/custom-web-development'>;
-    seoInformation: Attribute.Component<'seo.seo-info'>;
-    faqs: Attribute.Component<'layout.fa-qs'>;
+    seoInformation: Attribute.Component<'seo.seo-info'> & Attribute.Required;
+    faqs: Attribute.Component<'layout.fa-qs'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -796,8 +799,8 @@ export interface ApiDigitalMarketingServiceDigitalMarketingService
     URL: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'/digital-marketing-services'>;
-    seoInformation: Attribute.Component<'seo.seo-info'>;
-    faqs: Attribute.Component<'layout.fa-qs'>;
+    seoInformation: Attribute.Component<'seo.seo-info'> & Attribute.Required;
+    faqs: Attribute.Component<'layout.fa-qs'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -823,6 +826,7 @@ export interface ApiECommerceWebsiteDevelopmentServiceECommerceWebsiteDevelopmen
     singularName: 'e-commerce-website-development-service';
     pluralName: 'e-commerce-website-development-services';
     displayName: 'E-commerce-website-development-service';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -831,8 +835,8 @@ export interface ApiECommerceWebsiteDevelopmentServiceECommerceWebsiteDevelopmen
     URL: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'/web-design-and-development/e-commerce-website-development'>;
-    seoInformation: Attribute.Component<'seo.seo-info'>;
-    faqs: Attribute.Component<'layout.fa-qs'>;
+    seoInformation: Attribute.Component<'seo.seo-info'> & Attribute.Required;
+    faqs: Attribute.Component<'layout.fa-qs'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -857,6 +861,7 @@ export interface ApiGraphicDesignGraphicDesign extends Schema.SingleType {
     singularName: 'graphic-design';
     pluralName: 'graphic-designs';
     displayName: 'Graphic-design';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -865,8 +870,8 @@ export interface ApiGraphicDesignGraphicDesign extends Schema.SingleType {
     URL: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'/digital-marketing-services/graphic-design'>;
-    seoInformation: Attribute.Component<'seo.seo-info'>;
-    faqs: Attribute.Component<'layout.fa-qs'>;
+    seoInformation: Attribute.Component<'seo.seo-info'> & Attribute.Required;
+    faqs: Attribute.Component<'layout.fa-qs'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -898,8 +903,8 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
   };
   attributes: {
     URL: Attribute.String & Attribute.Required & Attribute.DefaultTo<'/'>;
-    seoInformation: Attribute.Component<'seo.seo-info'>;
-    faqs: Attribute.Component<'layout.fa-qs'>;
+    seoInformation: Attribute.Component<'seo.seo-info'> & Attribute.Required;
+    faqs: Attribute.Component<'layout.fa-qs'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -924,6 +929,7 @@ export interface ApiPpcMarketingPpcMarketing extends Schema.SingleType {
     singularName: 'ppc-marketing';
     pluralName: 'ppc-marketings';
     displayName: 'PPC-marketing';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -932,8 +938,8 @@ export interface ApiPpcMarketingPpcMarketing extends Schema.SingleType {
     URL: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'/digital-marketing-services/ppc-marketing'>;
-    seoInformation: Attribute.Component<'seo.seo-info'>;
-    faqs: Attribute.Component<'layout.fa-qs'>;
+    seoInformation: Attribute.Component<'seo.seo-info'> & Attribute.Required;
+    faqs: Attribute.Component<'layout.fa-qs'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -958,6 +964,7 @@ export interface ApiSeoServiceSeoService extends Schema.SingleType {
     singularName: 'seo-service';
     pluralName: 'seo-services';
     displayName: 'SEO-service';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -966,8 +973,8 @@ export interface ApiSeoServiceSeoService extends Schema.SingleType {
     URL: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'/digital-marketing-services/seo'>;
-    seoInformation: Attribute.Component<'seo.seo-info'>;
-    faqs: Attribute.Component<'layout.fa-qs'>;
+    seoInformation: Attribute.Component<'seo.seo-info'> & Attribute.Required;
+    faqs: Attribute.Component<'layout.fa-qs'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -993,6 +1000,7 @@ export interface ApiSocialMediaMarketingServiceSocialMediaMarketingService
     singularName: 'social-media-marketing-service';
     pluralName: 'social-media-marketing-services';
     displayName: 'Social-media-marketing-service';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1001,8 +1009,8 @@ export interface ApiSocialMediaMarketingServiceSocialMediaMarketingService
     URL: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'/digital-marketing-services/social-media-marketing'>;
-    seoInformation: Attribute.Component<'seo.seo-info'>;
-    faqs: Attribute.Component<'layout.fa-qs'>;
+    seoInformation: Attribute.Component<'seo.seo-info'> & Attribute.Required;
+    faqs: Attribute.Component<'layout.fa-qs'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1021,6 +1029,42 @@ export interface ApiSocialMediaMarketingServiceSocialMediaMarketingService
   };
 }
 
+export interface ApiSocialMediaOptimizationSocialMediaOptimization
+  extends Schema.SingleType {
+  collectionName: 'social_media_optimizations';
+  info: {
+    singularName: 'social-media-optimization';
+    pluralName: 'social-media-optimizations';
+    displayName: 'Social-media-optimization';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    URL: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'/digital-marketing-services/social-media-optimization'>;
+    seoInformation: Attribute.Component<'seo.seo-info'> & Attribute.Required;
+    faqs: Attribute.Component<'layout.fa-qs'> & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::social-media-optimization.social-media-optimization',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::social-media-optimization.social-media-optimization',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSurveillanceServiceSurveillanceService
   extends Schema.SingleType {
   collectionName: 'surveillance_services';
@@ -1028,6 +1072,7 @@ export interface ApiSurveillanceServiceSurveillanceService
     singularName: 'surveillance-service';
     pluralName: 'surveillance-services';
     displayName: 'Surveillance-service';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1036,8 +1081,8 @@ export interface ApiSurveillanceServiceSurveillanceService
     URL: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'/surveillance-services'>;
-    seoInformation: Attribute.Component<'seo.seo-info'>;
-    faqs: Attribute.Component<'layout.fa-qs'>;
+    seoInformation: Attribute.Component<'seo.seo-info'> & Attribute.Required;
+    faqs: Attribute.Component<'layout.fa-qs'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1063,6 +1108,7 @@ export interface ApiWebDesignAndDevelopmentWebDesignAndDevelopment
     singularName: 'web-design-and-development';
     pluralName: 'web-design-and-developments';
     displayName: 'Web-design-and-development';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1071,8 +1117,8 @@ export interface ApiWebDesignAndDevelopmentWebDesignAndDevelopment
     URL: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'/web-design-and-development'>;
-    seoInformation: Attribute.Component<'seo.seo-info'>;
-    faqs: Attribute.Component<'layout.fa-qs'>;
+    seoInformation: Attribute.Component<'seo.seo-info'> & Attribute.Required;
+    faqs: Attribute.Component<'layout.fa-qs'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1098,6 +1144,7 @@ export interface ApiWordpressDevelopmentServiceWordpressDevelopmentService
     singularName: 'wordpress-development-service';
     pluralName: 'wordpress-development-services';
     displayName: 'Wordpress-development-service';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1106,7 +1153,7 @@ export interface ApiWordpressDevelopmentServiceWordpressDevelopmentService
     URL: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'/web-design-and-development/wordpress-development'>;
-    seoInformation: Attribute.Component<'seo.seo-info'>;
+    seoInformation: Attribute.Component<'seo.seo-info'> & Attribute.Required;
     faqs: Attribute.Component<'layout.fa-qs'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1152,6 +1199,7 @@ declare module '@strapi/types' {
       'api::ppc-marketing.ppc-marketing': ApiPpcMarketingPpcMarketing;
       'api::seo-service.seo-service': ApiSeoServiceSeoService;
       'api::social-media-marketing-service.social-media-marketing-service': ApiSocialMediaMarketingServiceSocialMediaMarketingService;
+      'api::social-media-optimization.social-media-optimization': ApiSocialMediaOptimizationSocialMediaOptimization;
       'api::surveillance-service.surveillance-service': ApiSurveillanceServiceSurveillanceService;
       'api::web-design-and-development.web-design-and-development': ApiWebDesignAndDevelopmentWebDesignAndDevelopment;
       'api::wordpress-development-service.wordpress-development-service': ApiWordpressDevelopmentServiceWordpressDevelopmentService;

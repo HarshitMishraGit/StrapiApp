@@ -4,7 +4,8 @@
   "info": {
     "singularName": "wordpress-development-service",
     "pluralName": "wordpress-development-services",
-    "displayName": "Wordpress-development-service"
+    "displayName": "Wordpress-development-service",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,7 +20,8 @@
     "seoInformation": {
       "type": "component",
       "repeatable": false,
-      "component": "seo.seo-info"
+      "component": "seo.seo-info",
+      "required": true
     },
     "faqs": {
       "type": "component",

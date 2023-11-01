@@ -2,7 +2,8 @@
   "collectionName": "components_seo_seo_infos",
   "info": {
     "displayName": "SEO-INFO",
-    "icon": "code"
+    "icon": "code",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -11,8 +12,11 @@
       "required": true
     },
     "meta_description": {
-      "type": "string",
+      "type": "text",
       "required": true
+    },
+    "keywords": {
+      "type": "text"
     }
   }
 }

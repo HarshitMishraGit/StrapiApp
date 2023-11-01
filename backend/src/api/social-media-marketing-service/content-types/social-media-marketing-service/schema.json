@@ -4,7 +4,8 @@
   "info": {
     "singularName": "social-media-marketing-service",
     "pluralName": "social-media-marketing-services",
-    "displayName": "Social-media-marketing-service"
+    "displayName": "Social-media-marketing-service",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,12 +20,14 @@
     "seoInformation": {
       "type": "component",
       "repeatable": false,
-      "component": "seo.seo-info"
+      "component": "seo.seo-info",
+      "required": true
     },
     "faqs": {
       "type": "component",
       "repeatable": false,
-      "component": "layout.fa-qs"
+      "component": "layout.fa-qs",
+      "required": true
     }
   }
 }

@@ -21,7 +21,7 @@ export interface LayoutQuestionAnswer extends Schema.Component {
     description: '';
   };
   attributes: {
-    question: Attribute.String & Attribute.Required;
+    question: Attribute.Text & Attribute.Required;
     answer: Attribute.Text & Attribute.Required;
   };
 }
@@ -31,10 +31,12 @@ export interface SeoSeoInfo extends Schema.Component {
   info: {
     displayName: 'SEO-INFO';
     icon: 'code';
+    description: '';
   };
   attributes: {
     Title: Attribute.String & Attribute.Required;
-    meta_description: Attribute.String & Attribute.Required;
+    meta_description: Attribute.Text & Attribute.Required;
+    keywords: Attribute.Text;
   };
 }
 
