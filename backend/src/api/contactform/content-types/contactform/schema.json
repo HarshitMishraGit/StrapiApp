@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contactforms",
+  "info": {
+    "singularName": "contactform",
+    "pluralName": "contactforms",
+    "displayName": "contactform"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "service": {
+      "type": "string",
+      "required": true
+    },
+    "message": {
+      "type": "text"
+    }
+  }
+}

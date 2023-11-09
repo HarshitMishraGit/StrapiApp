@@ -747,6 +747,39 @@ export interface ApiContactUsContactUs extends Schema.SingleType {
   };
 }
 
+export interface ApiContactformContactform extends Schema.CollectionType {
+  collectionName: 'contactforms';
+  info: {
+    singularName: 'contactform';
+    pluralName: 'contactforms';
+    displayName: 'contactform';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    email: Attribute.Email & Attribute.Required;
+    service: Attribute.String & Attribute.Required;
+    message: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contactform.contactform',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contactform.contactform',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCustomWebDevelopmentServiceCustomWebDevelopmentService
   extends Schema.SingleType {
   collectionName: 'custom_web_development_services';
@@ -1191,6 +1224,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::contact-us.contact-us': ApiContactUsContactUs;
+      'api::contactform.contactform': ApiContactformContactform;
       'api::custom-web-development-service.custom-web-development-service': ApiCustomWebDevelopmentServiceCustomWebDevelopmentService;
       'api::digital-marketing-service.digital-marketing-service': ApiDigitalMarketingServiceDigitalMarketingService;
       'api::e-commerce-website-development-service.e-commerce-website-development-service': ApiECommerceWebsiteDevelopmentServiceECommerceWebsiteDevelopmentService;
