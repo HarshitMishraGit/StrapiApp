@@ -753,9 +753,10 @@ export interface ApiContactformContactform extends Schema.CollectionType {
     singularName: 'contactform';
     pluralName: 'contactforms';
     displayName: 'contactform';
+    description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     name: Attribute.String & Attribute.Required;
@@ -764,7 +765,6 @@ export interface ApiContactformContactform extends Schema.CollectionType {
     message: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::contactform.contactform',
       'oneToOne',
