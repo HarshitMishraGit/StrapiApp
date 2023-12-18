@@ -1,9 +1,9 @@
 module.exports = {
-    async afterCreate(event) {
-      const { result } = event;
-  
-      // Beautifully designed HTML template
-      const emailTemplate = `
+  async afterCreate(event) {
+    const { result } = event;
+
+    // Beautifully designed HTML template
+    const emailTemplate = `
         <style>
         @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic&subset=latin,cyrillic);
 
@@ -331,17 +331,17 @@ module.exports = {
 
 </center>
       `;
-  
-      try {
-        await strapi.plugins['email'].services.email.send({
-          to: process.env.TO_EMAIL,
-          from: `${process.env.FROM_NAME}<${process.env.SMTP_USERNAME}>`,
-          subject: process.env.CONTACT_SUBJECT,
-          html: emailTemplate,
-        });
-      } catch (err) {
-        console.error(err);
-      }
-    },
-  };
-  
+
+    try {
+      await strapi.plugins["email"].services.email.send({
+        to: process.env.TO_EMAIL,
+        from: `${process.env.FROM_NAME}<${process.env.SMTP_USERNAME}>`,
+        subject: process.env.CONTACT_SUBJECT,
+        html: emailTemplate,
+      });
+      console.log("Email sent successfully");
+    } catch (err) {
+      console.error(err);
+    }
+  },
+};
