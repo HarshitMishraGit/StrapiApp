@@ -307,6 +307,10 @@ module.exports = {
                             <td>${result.email}</td>
                           </tr>
                           <tr>
+                            <td><strong>Phone No.<strong></td>
+                            <td>${result.phone}</td>
+                          </tr>
+                          <tr>
                             <td><strong>Service</strong></td>
                             <td>${result.service}</td>
                           </tr>

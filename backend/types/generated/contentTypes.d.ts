@@ -763,6 +763,7 @@ export interface ApiContactformContactform extends Schema.CollectionType {
     email: Attribute.Email & Attribute.Required;
     service: Attribute.String & Attribute.Required;
     message: Attribute.Text;
+    phone: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

@@ -26,6 +26,10 @@
     },
     "message": {
       "type": "text"
+    },
+    "phone": {
+      "type": "string",
+      "required": true
     }
   }
 }
